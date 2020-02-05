@@ -8,7 +8,7 @@ import (
 	"path"
 	"testing"
 
-	"golang.org/x/text/message"
+	"github.com/liquid-dev/text/message"
 )
 
 func TestCatalog(t *testing.T) {
@@ -22,6 +22,10 @@ func TestCatalog(t *testing.T) {
 		lang: "en",
 		key:  "Hello world!\n",
 		want: "Hello world!\n",
+	}, {
+		lang: "en",
+		key:  "non-existing-key\n",
+		want: "non-existing-key\n",
 	}, {
 		lang: "de",
 		key:  "Hello world!\n",
