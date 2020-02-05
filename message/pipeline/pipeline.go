@@ -25,7 +25,7 @@ import (
 	"github.com/liquid-dev/text/internal"
 	"github.com/liquid-dev/text/language"
 	"github.com/liquid-dev/text/runes"
-	"golang.org/x/tools/go/loader"
+	"github.com/liquid-dev/tools/go/loader"
 )
 
 const (

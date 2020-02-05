@@ -20,7 +20,7 @@ import (
 	"github.com/liquid-dev/text/internal/catmsg"
 	"github.com/liquid-dev/text/internal/gen"
 	"github.com/liquid-dev/text/language"
-	"golang.org/x/tools/go/loader"
+	"github.com/liquid-dev/tools/go/loader"
 )
 
 var transRe = regexp.MustCompile(`messages\.(.*)\.json`)

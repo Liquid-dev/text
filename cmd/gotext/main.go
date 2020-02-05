@@ -28,7 +28,7 @@ import (
 	"github.com/liquid-dev/text/message/pipeline"
 
 	"github.com/liquid-dev/text/language"
-	"golang.org/x/tools/go/buildutil"
+	"github.com/liquid-dev/tools/go/buildutil"
 )
 
 func init() {
