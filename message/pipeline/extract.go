@@ -19,7 +19,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	fmtparser "golang.org/x/text/internal/format"
+	fmtparser "github.com/liquid-dev/text/internal/format"
 	"golang.org/x/tools/go/callgraph"
 	"golang.org/x/tools/go/callgraph/cha"
 	"golang.org/x/tools/go/loader"
@@ -101,9 +101,9 @@ func (x *extracter) globalData(pos token.Pos) *constData {
 }
 
 func (x *extracter) seedEndpoints() error {
-	pkgInfo := x.iprog.Package("golang.org/x/text/message")
+	pkgInfo := x.iprog.Package("github.com/liquid-dev/text/message")
 	if pkgInfo == nil {
-		return errors.New("pipeline: golang.org/x/text/message is not imported")
+		return errors.New("pipeline: github.com/liquid-dev/text/message is not imported")
 	}
 	pkg := x.prog.Package(pkgInfo.Pkg)
 	typ := types.NewPointer(pkg.Type("Printer").Type())

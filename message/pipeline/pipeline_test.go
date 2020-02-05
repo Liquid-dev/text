@@ -21,7 +21,7 @@ import (
 	"strings"
 	"testing"
 
-	"golang.org/x/text/language"
+	"github.com/liquid-dev/text/language"
 )
 
 var genFiles = flag.Bool("gen", false, "generate output files instead of comparing")
@@ -140,8 +140,8 @@ func initTestdataModule(t *testing.T, dst string) {
 
 	goMod := fmt.Sprintf(`module testdata
 go 1.11
-require golang.org/x/text v0.0.0-00010101000000-000000000000
-replace golang.org/x/text v0.0.0-00010101000000-000000000000 => %s
+require github.com/liquid-dev/text v0.0.0-00010101000000-000000000000
+replace github.com/liquid-dev/text v0.0.0-00010101000000-000000000000 => %s
 `, xTextDir)
 	if err := ioutil.WriteFile(filepath.Join(dst, "go.mod"), []byte(goMod), 0644); err != nil {
 		t.Fatal(err)
